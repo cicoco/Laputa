@@ -2,9 +2,9 @@ package unic.cicoco.laputa;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 
 import unic.cicoco.laputa.logger.UnicLog;
-
 
 public class MainActivity extends Activity {
 
@@ -14,7 +14,14 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        UnicLog.i(TAG , "onCreate...");
+        UnicLog.i(TAG, "onCreate...");
+        setContentView(R.layout.activity_main);
+        findViewById(R.id.btn_crash).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                throw new NullPointerException();
+            }
+        });
     }
 
     @Override

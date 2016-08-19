@@ -17,6 +17,7 @@ extern "C" {
        	void i(JNIEnv *env, jobject obj, jstring tag, jstring msg);
        	void w(JNIEnv *env, jobject obj, jstring tag, jstring msg);
        	void e(JNIEnv *env, jobject obj, jstring tag, jstring msg);
+
 };
 
 static JNINativeMethod methods[] = {

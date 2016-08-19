@@ -142,6 +142,12 @@ public class UnicLog implements LogLevel, WriteType, LogConstant {
         }
     }
 
+    public static void writeToFile(String destPath, String log) {
+        if (mIsInited) {
+            UnicLogger.writeToFile(destPath, log);
+        }
+    }
+
 
     public static void i(String tag, String msg, Throwable tr) {
         if (mIsInited) {

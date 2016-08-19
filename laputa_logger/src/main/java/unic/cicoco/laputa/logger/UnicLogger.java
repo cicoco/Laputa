@@ -36,5 +36,7 @@ public class UnicLogger {
 
     static native void e(String tag, String msg);
 
+    static native void writeToFile(String destPath, String log);
+
 
 }

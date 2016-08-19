@@ -186,3 +186,5 @@ void UnicLog::writeToFile(const char *buffer, int len)
 	}
 	pthread_mutex_unlock(&_lock);
 }
+
+

@@ -28,8 +28,7 @@ void setLogDestPath(JNIEnv *env, jobject obj, jstring destPath){
 
     UnicLog::setLogDestPath(cDestPath);
 
-//	env->ReleaseStringUTFChars(destPath, cDestPath);
-
+	env->ReleaseStringUTFChars(destPath, cDestPath);
 
 }
 

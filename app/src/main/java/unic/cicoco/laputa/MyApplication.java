@@ -4,6 +4,7 @@ import android.app.Application;
 
 import unic.cicoco.laputa.logger.LogConstant;
 import unic.cicoco.laputa.logger.LogLevel;
+import unic.cicoco.laputa.logger.UnicCrashHandler;
 import unic.cicoco.laputa.logger.UnicLog;
 import unic.cicoco.laputa.logger.WriteType;
 
@@ -32,5 +33,6 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        UnicCrashHandler.getInstance().init(this);
     }
 }
